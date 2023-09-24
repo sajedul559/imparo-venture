@@ -39,8 +39,8 @@ class PageRequest extends FormRequest
             //home page 
             "specification"         =>['nullable'],
             "specific_image"        => ['nullable'],
-            "specification_key"     => ['nullable', 'string'],
-            "specification_value"   => ['nullable', 'string'],
+            "specification_key"     => ['nullable'],
+            "specification_value"   => ['nullable'],
             "feature_title"         => ['nullable', 'string'],
             "feature_description"   => ['nullable', 'string'],
             "galleryImage"          => ['nullable'],

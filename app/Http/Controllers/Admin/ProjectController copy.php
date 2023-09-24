@@ -45,11 +45,10 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    // public function store(PageRequest $request)
     public function store(PageRequest $request)
     {
         $data = $request->validated();
-        // dd($data);
+        dd($data);
         $data['slug'] = Str::slug($data['title']);
         if(isset($data['image'])){
             $file = $data['image'];
@@ -68,34 +67,20 @@ class ProjectController extends Controller
             $file->move($path, $name);
             $data['specific_image'] = $name;
         }     
-        // if(isset($data['specification'])){
-        //     foreach($data['specification'] as $specific){
+        if(isset($data['specification'])){
+            foreach($data['specification'] as $specific){
 
-        //         if(isset($specific['specification_key'])){
+                if(isset($specific['specification_key'])){
                    
-        //                 $specifickey[]=$specific['specification_key'];
-        //                 $data['specification_key'] = $specifickey;
-        //         }
-        //         if(isset($specific['specification_value'])){
-        //                 $specificvalue[]=$specific['specification_value'];
-        //                 $data['specification_value'] = $specificvalue;
-        //         }                        
-        //     }
-        // }
-
-        // if(isset($data['specification_key'])){
-        //     foreach($data['specification_key'] as $specifickey){
-
-        //         $data['specification_key'] = $specifickey;
-                                     
-        //     }
-        // }
-        // if(isset($data['specification_value'])){
-        //     foreach($data['specification_value'] as $specificvalue){
-        //         $data['specification_value'] = $specificvalue;                     
-        //     }
-        // }
-
+                        $specifickey[]=$specific['specification_key'];
+                        $data['specification_key'] = $specifickey;
+                }
+                if(isset($specific['specification_value'])){
+                        $specificvalue[]=$specific['specification_value'];
+                        $data['specification_value'] = $specificvalue;
+                }                        
+            }
+        }
         
         if(isset($data['progress'])){
             foreach($data['progress'] as $progres){

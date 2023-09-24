@@ -181,15 +181,15 @@
                                                     
                                                 </div>
                                                     <div class="mb-3">
-                                                        {{-- <div id="specification">
+                                                        <div id="specification">
                                                             <!--begin::Form group-->
                                                             <div class="form-group">
                                                                 <div data-repeater-list="specification" id="Repeter">
                                                                     <div data-repeater-item class="repeater-item">
                                                                         <div class="form-group row">
                                                                             <div class="mb-3 col-md-5">
-                                                                                <label for="">Specification Name<span class="text-danger">*</span></label>
-                                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key" placeholder="Enter specification name" required />
+                                                                                <label for="">Key<span class="text-danger">*</span></label>
+                                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key" placeholder="Enter skill progress" required />
                             
                                                                                 @error('skill_title')
                                                                                 <p class="error">{{ $message }}</p>
@@ -197,7 +197,52 @@
                                                                             </div>
                                                                             <div class="col-md-5">
                                                                                 <label class="form-label">Value<span class="text-danger">*</span></label>
-                                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value" placeholder="Enter specification name" required />
+                                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value" placeholder="Enter skill progress" required />
+                                                                            </div>
+                                                                            <div class="mb-3 col-md-5">
+                                                                                <label for="">Key<span class="text-danger">*</span></label>
+                                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key" placeholder="Enter skill progress" required />
+                            
+                                                                                @error('skill_title')
+                                                                                <p class="error">{{ $message }}</p>
+                                                                                @enderror
+                                                                            </div>
+                                                                            <div class="col-md-5">
+                                                                                <label class="form-label">Value<span class="text-danger">*</span></label>
+                                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value" placeholder="Enter skill progress" required />
+                                                                            </div><div class="mb-3 col-md-5">
+                                                                                <label for="">Key<span class="text-danger">*</span></label>
+                                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key" placeholder="Enter skill progress" required />
+                            
+                                                                                @error('skill_title')
+                                                                                <p class="error">{{ $message }}</p>
+                                                                                @enderror
+                                                                            </div>
+                                                                            <div class="col-md-5">
+                                                                                <label class="form-label">Value<span class="text-danger">*</span></label>
+                                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value" placeholder="Enter skill progress" required />
+                                                                            </div><div class="mb-3 col-md-5">
+                                                                                <label for="">Key<span class="text-danger">*</span></label>
+                                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key" placeholder="Enter skill progress" required />
+                            
+                                                                                @error('skill_title')
+                                                                                <p class="error">{{ $message }}</p>
+                                                                                @enderror
+                                                                            </div>
+                                                                            <div class="col-md-5">
+                                                                                <label class="form-label">Value<span class="text-danger">*</span></label>
+                                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value" placeholder="Enter skill progress" required />
+                                                                            </div><div class="mb-3 col-md-5">
+                                                                                <label for="">Key<span class="text-danger">*</span></label>
+                                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key" placeholder="Enter skill progress" required />
+                            
+                                                                                @error('skill_title')
+                                                                                <p class="error">{{ $message }}</p>
+                                                                                @enderror
+                                                                            </div>
+                                                                            <div class="col-md-5">
+                                                                                <label class="form-label">Value<span class="text-danger">*</span></label>
+                                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value" placeholder="Enter skill progress" required />
                                                                             </div>
                                                                             <div class="col-md-2 mt-4 pt-1">
 
@@ -218,160 +263,6 @@
                                                                 </a>
                                                             </div>
                                                             <!--end::Form group-->
-                                                        </div> --}}
-
-                                                        <div class="form-group row">
-                                                            <div class="mb-3 col-md-5">
-                                                                <label for="">Specification Name<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key[]" value="Land Area" placeholder="Enter specification name" required />
-            
-                                                                @error('skill_title')
-                                                                <p class="error">{{ $message }}</p>
-                                                                @enderror
-                                                            </div>
-                                                            <div class="col-md-5">
-                                                                <label class="form-label">Value<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value[]" value="7395 sft" placeholder="Enter specification name" required />
-                                                            </div>
-                                                            
-                                                            <div class="mb-3 col-md-5">
-                                                                <label for="">Specification Name<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key[]" value="Orientation" placeholder="Enter specification name" required />
-            
-                                                                @error('skill_title')
-                                                                <p class="error">{{ $message }}</p>
-                                                                @enderror
-                                                            </div>
-                                                            <div class="col-md-5">
-                                                                <label class="form-label">Value<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value[]" value="East" placeholder="Enter specification name" required />
-                                                            </div>
-                                                            
-                                                            
-                                                            
-            
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="mb-3 col-md-5">
-                                                                <label for="">Specification Name<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key[]" value="Front Road" placeholder="Enter specification name" required />
-            
-                                                                @error('skill_title')
-                                                                <p class="error">{{ $message }}</p>
-                                                                @enderror
-                                                            </div>
-                                                            <div class="col-md-5">
-                                                                <label class="form-label">Value<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value[]" value="100 feet" placeholder="Enter specification name" required />
-                                                            </div>
-                                                            
-                                                            <div class="mb-3 col-md-5">
-                                                                <label for="">Specification Name<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key[]" value="Apartment Size" placeholder="Enter specification name" required />
-            
-                                                                @error('skill_title')
-                                                                <p class="error">{{ $message }}</p>
-                                                                @enderror
-                                                            </div>
-                                                            <div class="col-md-5">
-                                                                <label class="form-label">Value<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value[]" value="4450 sft" placeholder="Enter specification name" required />
-                                                            </div>                                                                  
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="mb-3 col-md-5">
-                                                                <label for="">Specification Name<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key[]" value="Living Floors" placeholder="Enter specification name" required />
-            
-                                                                @error('skill_title')
-                                                                <p class="error">{{ $message }}</p>
-                                                                @enderror
-                                                            </div>
-                                                            <div class="col-md-5">
-                                                                <label class="form-label">Value<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value[]" value="9" placeholder="Enter specification name" required />
-                                                            </div>
-                                                            
-                                                            <div class="mb-3 col-md-5">
-                                                                <label for="">Specification Name<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key[]" value="Number of Parking" placeholder="Enter specification name" required />
-            
-                                                                @error('skill_title')
-                                                                <p class="error">{{ $message }}</p>
-                                                                @enderror
-                                                            </div>
-                                                            <div class="col-md-5">
-                                                                <label class="form-label">Value<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value[]" value="27" placeholder="Enter specification name" required />
-                                                            </div>                                                                  
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="mb-3 col-md-5">
-                                                                <label for="">Specification Name<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key[]" value="Basement" placeholder="Enter specification name" required />
-            
-                                                                @error('skill_title')
-                                                                <p class="error">{{ $message }}</p>
-                                                                @enderror
-                                                            </div>
-                                                            <div class="col-md-5">
-                                                                <label class="form-label">Value<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value[]" value="2" placeholder="Enter specification name" required />
-                                                            </div>
-                                                            
-                                                            <div class="mb-3 col-md-5">
-                                                                <label for="">Specification Name<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key[]" value="Nos of elevator" placeholder="Enter specification name" required />
-            
-                                                                @error('skill_title')
-                                                                <p class="error">{{ $message }}</p>
-                                                                @enderror
-                                                            </div>
-                                                            <div class="col-md-5">
-                                                                <label class="form-label">Value<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value[]" value="2" placeholder="Enter specification name" required />
-                                                            </div>                                                                  
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="mb-3 col-md-5">
-                                                                <label for="">Specification Name<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key[]" value="Handover Date" placeholder="Enter specification name" required />
-            
-                                                                @error('skill_title')
-                                                                <p class="error">{{ $message }}</p>
-                                                                @enderror
-                                                            </div>
-                                                            <div class="col-md-5">
-                                                                <label class="form-label">Value<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value[]" value="2024" placeholder="Enter specification name" required />
-                                                            </div>
-                                                            
-                                                            <div class="mb-3 col-md-5">
-                                                                <label for="">Specification Name<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key[]" value="Architect" placeholder="Enter specification name" required />
-            
-                                                                @error('skill_title')
-                                                                <p class="error">{{ $message }}</p>
-                                                                @enderror
-                                                            </div>
-                                                            <div class="col-md-5">
-                                                                <label class="form-label">Value<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value[]" value="Interform" placeholder="Enter specification name" required />
-                                                            </div>                                                                  
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="mb-3 col-md-5">
-                                                                <label for="">Specification Name<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_key[]" value="Architect Design" placeholder="Enter specification name" required />
-            
-                                                                @error('skill_title')
-                                                                <p class="error">{{ $message }}</p>
-                                                                @enderror
-                                                            </div>
-                                                            <div class="col-md-5">
-                                                                <label class="form-label">Value<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" name="specification_value[]" value="Dr Shamim Z Boshunia" placeholder="Enter specification name" required />
-                                                            </div>                                                                
                                                         </div>
                             
                             
@@ -514,7 +405,7 @@
                                                                         <div class="form-group row">
                                                                             <div class="mb-3 col-md-3">
                                                                                 <label for="">Progress Name<span class="text-danger">*</span></label>
-                                                                                <input type="text" class="form-control mb-2 mb-md-0" name="progress_name" placeholder="Enter specification name" required />
+                                                                                <input type="text" class="form-control mb-2 mb-md-0" name="progress_name" placeholder="Enter skill progress" required />
                             
                                                                                 @error('progress_name')
                                                                                 <p class="error">{{ $message }}</p>
