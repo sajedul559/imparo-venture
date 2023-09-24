@@ -514,7 +514,7 @@
                                                                         <div class="form-group row">
                                                                             <div class="mb-3 col-md-3">
                                                                                 <label for="">Progress Name<span class="text-danger">*</span></label>
-                                                                                <input type="text" class="form-control mb-2 mb-md-0" name="progress_name" placeholder="Enter specification name" required />
+                                                                                <input type="text" class="form-control mb-2 mb-md-0" readonly name="progress_name" value="Test name" placeholder="Enter specification name" required />
                             
                                                                                 @error('progress_name')
                                                                                 <p class="error">{{ $message }}</p>
@@ -532,7 +532,9 @@
                                                                             </div>
                                                                             <div class="mb-3 col-md-4">
                                                                                 <label for="">Progress Image<span class="text-danger">*</span></label>
-                                                                                <input type="file" class="form-control mb-2 mb-md-0" name="progress_images"  required />
+                                                                                {{-- <input type="file" class="form-control mb-2 mb-md-0" name=""  /> --}}
+                                                                                <input type="text" class="form-control mb-2 mb-md-0" readonly name="progress_images" value="pailing.png"   />
+
                             
                                                                                 @error('progress_images')
                                                                                 <p class="error">{{ $message }}</p>
