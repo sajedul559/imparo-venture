@@ -253,9 +253,7 @@ class ProjectController extends Controller
         if(isset($data['images'])){
             
             foreach($data['images'] as $image){
-                $file = $image;
-                // $filename =   $file['images'];
-  
+                $file = $image;  
                 $ext = 'png';
                 $name = mt_rand(1000,1000000).'.'.$ext;
                 $path = "images/page/projectgallery";
@@ -301,11 +299,7 @@ class ProjectController extends Controller
                             if((isset($progres['progress_images'])) && isset($progres['progress_images_old'])){
                                 if($progres['progress_images'] && $progres['progress_images_old']){
                                     
-                                    // if(File::exists('images/page/project/progress/'.$project->content['progress_images'])){
-                                    //     File::delete('images/page/project/progress/'.$project->content['progress_images']);
-                                    // }
                                     $file = $progres['progress_images'];
-                                    // $filename =   $file['images'];
                       
                                     $ext = 'png';
                                     $name = mt_rand(1000,1000000).'.'.$ext;
@@ -319,9 +313,7 @@ class ProjectController extends Controller
                                     $progreImages[] = $image;
     
                                 }
-                                dd('222');
                                 $file = $progres['progress_images'];
-                                    // $filename =   $file['images'];
                       
                                     $ext = 'png';
                                     $name = mt_rand(1000,1000000).'.'.$ext;
