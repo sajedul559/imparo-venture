@@ -1,0 +1,74 @@
+/**Font Size & Font Family**/
+
+// ------------------
+
+body {
+  font-family: $font-regular;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: 72px;
+  line-height: 110%;
+
+  span {
+    @extend h1;
+  }
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 120%;
+
+  span {
+    @extend h2;
+  }
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 130%;
+}
+
+.sub-1 {
+  font-size: 24px;
+  line-height: 130%;
+}
+
+.sub-2 {
+  font-size: 20px;
+  line-height: 140%;
+}
+
+.sub-3 {
+  font-size: 16px;
+  line-height: 120%;
+}
+
+p,
+a,
+span,
+label,
+li {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.body-2 {
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.body-3 {
+  font-size: 12px;
+  line-height: 140%;
+}

@@ -1,0 +1,16 @@
+.company-sub-title .sub-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0px 0px 80px;
+  line-height: 21px;
+  color: rgba(0, 0, 0, 0.51);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  @media #{$max991} {
+    margin-bottom: 40px;
+  }
+  @media #{$max767} {
+    margin-bottom: 20px;
+    padding-top: 40px;
+  }
+}

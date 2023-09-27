@@ -1,0 +1,53 @@
+//Font
+
+@font-face {
+  font-family: "Sofia Pro", sans-serif;
+  src: url("../fonts/text-fonts/Sofia-Pro-Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Sofia Pro", sans-serif;
+  src: url("../fonts/text-fonts/Sofia-Pro-Medium.otf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Sofia Pro", sans-serif;
+  src: url("../fonts/text-fonts/Sofia-Pro-Semi-Bold.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Sofia Pro", sans-serif;
+  src: url("../fonts/text-fonts/Sofia-Pro-Bold.otf");
+  font-weight: 700;
+}
+
+$font-regular: "Sofia Pro", sans-serif;
+$font-medium: "Sofia Pro", sans-serif;
+$font-semi-bold: "Sofia Pro", sans-serif;
+$font-bold: "Sofia Pro", sans-serif;
+
+//Color
+$color-primary: #00cf9d;
+$color-white: #fff;
+$color-black: #1b1d1d;
+$color-gray: #cbcbcb;
+
+//Media Query
+
+$max1920: "only screen and (max-width: 1920px)";
+// $max1850: "only screen and (max-width: 1850px)";
+$max1800: "only screen and (max-width: 1800px)";
+// $max1760: "only screen and (max-width: 1760px)";
+$max1650: "only screen and (max-width: 1650px)";
+$max1399: "only screen and (max-width: 1399.98px)";
+$max1366: "only screen and (max-width: 1366px)";
+$max1280: "only screen and (max-width: 1280px)";
+$max1199: "only screen and (max-width: 1199.98px)";
+$max991: "only screen and (max-width: 991.98px)";
+$max767: "only screen and (max-width: 767.98px)";
+$max575: "only screen and (max-width: 575.98px)";
+$max480: "only screen and (max-width: 480px)";
+$max374: "only screen and (max-width: 374.98px)";

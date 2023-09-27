@@ -1,0 +1,31 @@
+// Abstract Styles
+
+@import "./abstracts/mixins";
+@import "./abstracts/variable";
+
+//Base Styles
+
+@import "./base/global";
+@import "./base/reset";
+@import "./base/typhography";
+
+//Component
+
+@import "./component/breadcumb";
+@import "./component/button";
+@import "./component/forms";
+
+//Layout
+
+@import "./layout/banner";
+@import "./layout/footer";
+@import "./layout/header";
+
+//Pages Styles
+
+@import "./pages/home";
+@import "./pages/inquiry";
+@import "./pages/project";
+@import "./pages/about";
+@import "./pages/company";
+@import "./pages/property-details";
