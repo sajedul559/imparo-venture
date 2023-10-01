@@ -18,6 +18,7 @@ class FrontendController extends Controller
 
         $pages = HomePage::where('status','active')->get();
         $projects = Project::with('category')->orderBy('created_at','desc')->take(4)->get();
+
         return view('home',compact('pages','projects'));
     }
 
@@ -57,6 +58,7 @@ class FrontendController extends Controller
     }
     public function projectDetails($slug){
         $project = Project::with('features','projectGalleries')->where('slug',$slug)->first();
+        // dd($project->content);
         return view('project-details',compact('project'));
     }
     public function statusWiseProject($slug,$status){

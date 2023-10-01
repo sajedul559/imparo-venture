@@ -49,8 +49,8 @@ class PageRequest extends FormRequest
 
             'progress_title' => ['required', 'string', 'max:100'],
             'progress_description' => ['required', 'string', 'max:2000'],
-            'progress_name' => ['nullable', 'string', 'max:100'],
-            'progress_status' => ['nullable', 'string', 'max:100'],
+            'progress_name' => ['nullable', 'max:100'],
+            'progress_status' => ['nullable', 'max:100'],
             'progress_images' => ['nullable'],
             'progress_images_old'  =>['nullable'],
 

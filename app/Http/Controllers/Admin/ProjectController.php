@@ -49,7 +49,7 @@ class ProjectController extends Controller
     public function store(PageRequest $request)
     {
         $data = $request->validated();
-         dd($data);
+        //  dd($data);
         $data['slug'] = Str::slug($data['title']);
         if(isset($data['image'])){
             $file = $data['image'];
@@ -134,10 +134,9 @@ class ProjectController extends Controller
             "galleryImage"   => isset($data['images'])?$data['images'] :null,
             "progress_title"   => isset($data['progress_title'])?$data['progress_title'] :null,
             "progress_description"   => isset($data['progress_description'])?$data['progress_description'] :null,
-            "progress_name"   => isset($progress_name)?$progress_name :null,
-            "progress_status"   =>isset($progress_status)?$progress_status :null,
+            "progress_name"   => isset($data['progress_name'])?$data['progress_name'] :null,
+            "progress_status"   => isset($data['progress_status'])?$data['progress_status'] :null,
             "progress_images"   => isset($data['progress_images'])?$data['progress_images'] :null,
-            // "progress_images"   =>isset($progreImages)?$progreImages :null,
             
        ]);
        $data['content'] = $pageContent;
@@ -203,6 +202,7 @@ class ProjectController extends Controller
         $categories = Category::where('status','active')->get();
         $features = Feature::where('status','active')->get();
         $project = Project::find($id);
+    
         
        
         $gellary_image = ProjectGallery::where('Project_id',$id)->get();
@@ -302,54 +302,54 @@ class ProjectController extends Controller
             }
         }
         if(isset($data['progress'])){
-            foreach($data['progress'] as $progres){
-                if(isset($progres['progress_name'])){
-                        $progress_name[]=$progres['progress_name'];                       
+            // foreach($data['progress'] as $progres){
+            //     if(isset($progres['progress_name'])){
+            //             $progress_name[]=$progres['progress_name'];                       
 
-                }  
-                if(isset($progres['progress_status'])){
-                    $progress_status[]=$progres['progress_status'];
+            //     }  
+            //     if(isset($progres['progress_status'])){
+            //         $progress_status[]=$progres['progress_status'];
 
-                }                                  
-            }
-                        if(isset($progres['progress_images'])){
-                            if((isset($progres['progress_images'])) && isset($progres['progress_images_old'])){
-                                if($progres['progress_images'] && $progres['progress_images_old']){
+            //     }                                  
+            // }
+                        // if(isset($progres['progress_images'])){
+                        //     if((isset($progres['progress_images'])) && isset($progres['progress_images_old'])){
+                        //         if($progres['progress_images'] && $progres['progress_images_old']){
                                     
-                                    $file = $progres['progress_images'];
+                        //             $file = $progres['progress_images'];
                       
-                                    $ext = 'png';
-                                    $name = mt_rand(1000,1000000).'.'.$ext;
-                                    $path = "images/page/project/progress";
-                                    $file->move($path, $name);
-                                    $images[] = $name;
-                                    $progreImages[] = $name;  
-                                }
-                            }elseif(isset($progres['progress_images'])){
-                                foreach($project->content['progress_images'] as $image){
-                                    $progreImages[] = $image;
+                        //             $ext = 'png';
+                        //             $name = mt_rand(1000,1000000).'.'.$ext;
+                        //             $path = "images/page/project/progress";
+                        //             $file->move($path, $name);
+                        //             $images[] = $name;
+                        //             $progreImages[] = $name;  
+                        //         }
+                        //     }elseif(isset($progres['progress_images'])){
+                        //         foreach($project->content['progress_images'] as $image){
+                        //             $progreImages[] = $image;
     
-                                }
-                                $file = $progres['progress_images'];
+                        //         }
+                        //         $file = $progres['progress_images'];
                       
-                                    $ext = 'png';
-                                    $name = mt_rand(1000,1000000).'.'.$ext;
-                                    $path = "images/page/project/progress";
-                                    $file->move($path, $name);
-                                    $images[] = $name;
-                                    $progreImages[] = $name;  
-                            }else{
-                                foreach($project->content['progress_images'] as $image){
-                                    $progreImages[] = $image;
+                        //             $ext = 'png';
+                        //             $name = mt_rand(1000,1000000).'.'.$ext;
+                        //             $path = "images/page/project/progress";
+                        //             $file->move($path, $name);
+                        //             $images[] = $name;
+                        //             $progreImages[] = $name;  
+                        //     }else{
+                        //         foreach($project->content['progress_images'] as $image){
+                        //             $progreImages[] = $image;
     
-                                }
-                            }
-                        }else{
-                            foreach($project->content['progress_images'] as $image){
-                                $progreImages[] = $image;
+                        //         }
+                        //     }
+                        // }else{
+                        //     foreach($project->content['progress_images'] as $image){
+                        //         $progreImages[] = $image;
 
-                            }
-                        }
+                        //     }
+                        // }
         }
         
         $pageContent = ([            
@@ -364,11 +364,12 @@ class ProjectController extends Controller
             "feature_title"  => isset($data['feature_title'])?$data['feature_title'] :null,
             "feature_description" => isset($data['feature_description'])?$data['feature_description'] :null,
             "galleryImage"   => isset($data['images'])?$data['images'] :null,
-            "progress_images"   =>isset($progreImages)?$progreImages :null,
             "progress_title"   => isset($data['progress_title'])?$data['progress_title'] :null,
             "progress_description"   => isset($data['progress_description'])?$data['progress_description'] :null,
-            "progress_name"   => isset($progress_name)?$progress_name :null,           
-            "progress_status"   =>isset($progress_status)?$progress_status :null,
+
+            "progress_name"   => isset($data['progress_name'])?$data['progress_name'] :null,
+            "progress_status"   => isset($data['progress_status'])?$data['progress_status'] :null,
+            "progress_images"   => isset($data['progress_images'])?$data['progress_images'] :null,
 
        ]);
        $data['content'] = $pageContent;

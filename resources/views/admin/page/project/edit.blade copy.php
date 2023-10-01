@@ -323,52 +323,192 @@
                                                     </div>
                                                     
                                                 </div>
-                                                <div>
-                                                    @foreach ($project->content['progress_name'] as $key => $data)
-                                                        <div class="form-group row">
-                                                            <div class="mb-3 col-md-3">
-                                                                <label for="">Progress Name<span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control mb-2 mb-md-0" readonly name="progress_name[]" value="Test name" placeholder="Enter specification name" required />
-            
-                                                                @error('progress_name')
-                                                                <p class="error">{{ $message }}</p>
-                                                                @enderror
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <label class="form-label">Progress Status<span class="text-danger">*</span></label>
-                                                                <label class="form-label">Select Type<span class="error">*</span></label>
-                                                                <select  name="progress_status" class="form-control"   title="status" required>
-                                                                    <option  value="completed" @if ($data == 'completed')
-                                                                        
-                                                                    selected  @endif >Completed</option>
-                                                                    
-                                                                    <option @if ($data == 'in_Progress')
-                                                                        
-                                                                    selected  @endif value="in_Progress">In Progress</option>                                     
-                                                                    <option @if ($data == 'waiting')
-                                                                        
-                                                                    selected  @endif value="waiting">Waiting</option>                                     
-                                                                </select>
-                                                            </div>
-                                                            <div class="mb-3 col-md-4">
-                                                                <label for="">Progress Image<span class="text-danger">*</span></label>
-                                                                {{-- <input type="file" class="form-control mb-2 mb-md-0" name=""  /> --}}
-                                                                <input type="text" class="form-control mb-2 mb-md-0" readonly name="progress_images[]" value="pailing.png"   />
-        
-            
-                                                                @error('progress_images')
-                                                                <p class="error">{{ $message }}</p>
-                                                                @enderror
-                                                            </div>
-                                                            <div class="col-md-2 mt-4 pt-1">
-        
-                                                                <a href="javascript:;" data-repeater-delete  class="btn btn-primary ">
-                                                                    <i class="la la-trash-o"></i>Delete
-                                                                </a>
-                                                            </div>
-            
-                                                        </div>
-                                                    @endforeach
+                                                <div class="form-group row">
+                                                    <div class="mb-3 col-md-3">
+                                                        <label for="">Progress Name<span class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control mb-2 mb-md-0" readonly name="progress_name[]" value="Test name" placeholder="Enter specification name" required />
+    
+                                                        @error('progress_name')
+                                                        <p class="error">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label class="form-label">Progress Status<span class="text-danger">*</span></label>
+                                                        <label class="form-label">Select Type<span class="error">*</span></label>
+                                                        <select  name="progress_status[]" class="form-control"   title="status" required>
+                                                            <option value=""  disabled selected>Please select type</option>
+                                                            <option  value="completed">Completed</option>
+                                                            <option value="in_Progress">In Progress</option>                                     
+                                                            <option value="waiting">Waiting</option>                                     
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-3 col-md-4">
+                                                        <label for="">Progress Image<span class="text-danger">*</span></label>
+                                                        {{-- <input type="file" class="form-control mb-2 mb-md-0" name=""  /> --}}
+                                                        <input type="text" class="form-control mb-2 mb-md-0" readonly name="progress_images[]" value="pailing.png"   />
+
+    
+                                                        @error('progress_images')
+                                                        <p class="error">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-2 mt-4 pt-1">
+
+                                                        <a href="javascript:;" data-repeater-delete  class="btn btn-primary ">
+                                                            <i class="la la-trash-o"></i>Delete
+                                                        </a>
+                                                    </div>
+    
+                                                </div>
+                                                    
+                                                <div class="form-group row">
+                                                    <div class="mb-3 col-md-3">
+                                                        <label for="">Progress Name<span class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control mb-2 mb-md-0" readonly name="progress_name[]" value="Test name" placeholder="Enter specification name" required />
+    
+                                                        @error('progress_name')
+                                                        <p class="error">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label class="form-label">Progress Status<span class="text-danger">*</span></label>
+                                                        <label class="form-label">Select Type<span class="error">*</span></label>
+                                                        <select  name="progress_status[]" class="form-control"   title="status" required>
+                                                            <option value=""  disabled selected>Please select type</option>
+                                                            <option  value="completed">Completed</option>
+                                                            <option value="in_Progress">In Progress</option>                                     
+                                                            <option value="waiting">Waiting</option>                                     
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-3 col-md-4">
+                                                        <label for="">Progress Image<span class="text-danger">*</span></label>
+                                                        {{-- <input type="file" class="form-control mb-2 mb-md-0" name=""  /> --}}
+                                                        <input type="text" class="form-control mb-2 mb-md-0" readonly name="progress_images[]" value="pailing.png"   />
+
+    
+                                                        @error('progress_images')
+                                                        <p class="error">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-2 mt-4 pt-1">
+
+                                                        <a href="javascript:;" data-repeater-delete  class="btn btn-primary ">
+                                                            <i class="la la-trash-o"></i>Delete
+                                                        </a>
+                                                    </div>
+    
+                                                </div>
+                                                    
+                                                <div class="form-group row">
+                                                    <div class="mb-3 col-md-3">
+                                                        <label for="">Progress Name<span class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control mb-2 mb-md-0" readonly name="progress_name[]" value="Test name" placeholder="Enter specification name" required />
+    
+                                                        @error('progress_name')
+                                                        <p class="error">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label class="form-label">Progress Status<span class="text-danger">*</span></label>
+                                                        <label class="form-label">Select Type<span class="error">*</span></label>
+                                                        <select  name="progress_status[]" class="form-control"   title="status" required>
+                                                            <option value=""  disabled selected>Please select type</option>
+                                                            <option  value="completed">Completed</option>
+                                                            <option value="in_Progress">In Progress</option>                                     
+                                                            <option value="waiting">Waiting</option>                                     
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-3 col-md-4">
+                                                        <label for="">Progress Image<span class="text-danger">*</span></label>
+                                                        {{-- <input type="file" class="form-control mb-2 mb-md-0" name=""  /> --}}
+                                                        <input type="text" class="form-control mb-2 mb-md-0" readonly name="progress_images[]" value="pailing.png"   />
+
+    
+                                                        @error('progress_images')
+                                                        <p class="error">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-2 mt-4 pt-1">
+
+                                                        <a href="javascript:;" data-repeater-delete  class="btn btn-primary ">
+                                                            <i class="la la-trash-o"></i>Delete
+                                                        </a>
+                                                    </div>
+    
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="mb-3 col-md-3">
+                                                        <label for="">Progress Name<span class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control mb-2 mb-md-0" readonly name="progress_name[]" value="Test name" placeholder="Enter specification name" required />
+    
+                                                        @error('progress_name')
+                                                        <p class="error">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label class="form-label">Progress Status<span class="text-danger">*</span></label>
+                                                        <label class="form-label">Select Type<span class="error">*</span></label>
+                                                        <select  name="progress_status[]" class="form-control"   title="status" required>
+                                                            <option value=""  disabled selected>Please select type</option>
+                                                            <option  value="completed">Completed</option>
+                                                            <option value="in_Progress">In Progress</option>                                     
+                                                            <option value="waiting">Waiting</option>                                     
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-3 col-md-4">
+                                                        <label for="">Progress Image<span class="text-danger">*</span></label>
+                                                        {{-- <input type="file" class="form-control mb-2 mb-md-0" name=""  /> --}}
+                                                        <input type="text" class="form-control mb-2 mb-md-0" readonly name="progress_images[]" value="pailing.png"   />
+
+    
+                                                        @error('progress_images')
+                                                        <p class="error">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-2 mt-4 pt-1">
+
+                                                        <a href="javascript:;" data-repeater-delete  class="btn btn-primary ">
+                                                            <i class="la la-trash-o"></i>Delete
+                                                        </a>
+                                                    </div>
+    
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="mb-3 col-md-3">
+                                                        <label for="">Progress Name<span class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control mb-2 mb-md-0" readonly name="progress_name[]" value="Test name" placeholder="Enter specification name" required />
+    
+                                                        @error('progress_name')
+                                                        <p class="error">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label class="form-label">Progress Status<span class="text-danger">*</span></label>
+                                                        <label class="form-label">Select Type<span class="error">*</span></label>
+                                                        <select  name="progress_status[]" class="form-control"   title="status" required>
+                                                            <option value=""  disabled selected>Please select type</option>
+                                                            <option  value="completed">Completed</option>
+                                                            <option value="in_Progress">In Progress</option>                                     
+                                                            <option value="waiting">Waiting</option>                                     
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-3 col-md-4">
+                                                        <label for="">Progress Image<span class="text-danger">*</span></label>
+                                                        {{-- <input type="file" class="form-control mb-2 mb-md-0" name=""  /> --}}
+                                                        <input type="text" class="form-control mb-2 mb-md-0" readonly name="progress_images[]" value="pailing.png"   />
+
+    
+                                                        @error('progress_images')
+                                                        <p class="error">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-2 mt-4 pt-1">
+
+                                                        <a href="javascript:;" data-repeater-delete  class="btn btn-primary ">
+                                                            <i class="la la-trash-o"></i>Delete
+                                                        </a>
+                                                    </div>
+    
                                                 </div>
                                             </div>
                                         </div>
