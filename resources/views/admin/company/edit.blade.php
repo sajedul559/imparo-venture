@@ -117,7 +117,7 @@
                                                     </div>
                                                     <div class="col-md-12 mt-1 mb-3">
                                                         <label class="form-label">Description<span class="error">*</span></label>
-                                                        <textarea rows="4" name="intro_description" type="text" class="form-control"
+                                                        <textarea rows="4" name="intro_description" type="text" class="form-control summernote"
                                                             value="{{ old('intro_description') }}" required="required" placeholder="Enter description...." >{{$company->content['intro_description']}}</textarea>
                                                         @error('intro_description')
                                                           <p class="error">{{ $message }}</p>
@@ -199,7 +199,7 @@
                                                                             </div>
                                                                             <div class="mb-3 col-md-10">
                                                                                 <label class="form-label">Description<span class="error">*</span></label>
-                                                                                <textarea rows="8" cols="15" name="gallery_description" type="text" class="form-control"
+                                                                                <textarea rows="8" cols="15" name="gallery_description" type="text" class="form-control summernote"
                                                                                     value="{{ old('gallery_description') }}" required="required" placeholder="Enter who we are short description" >{{$company->content['gallery_description'][$key]}}</textarea>
                                                                                 @error('gallery_description')
                                                                                   <p class="error">{{ $message }}</p>
@@ -319,6 +319,8 @@
               
             }
             $(document).ready(function() {
+                initSummernote();
+
                 $('.input-images-1').imageUploader();
 
                 $("#feature_id").select2({
